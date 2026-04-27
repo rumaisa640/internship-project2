@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Menu, X, Bell, MessageCircle, User, LogOut, Building2, CircleDollarSign } from 'lucide-react';
+import { 
+  Menu, X, Bell, MessageCircle, User, LogOut, 
+  Building2, CircleDollarSign,
+  Calendar, Video, FileText, CreditCard
+} from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { Avatar } from '../ui/Avatar';
 import { Button } from '../ui/Button';
@@ -49,7 +53,28 @@ export const Navbar: React.FC = () => {
       icon: <User size={18} />,
       text: 'Profile',
       path: profileRoute,
-    }
+    },
+    {
+  icon: <Calendar size={18} />,
+  text: 'Calendar',
+  path: '/calendar',
+},
+{
+  icon: <Video size={18} />,
+  text: 'Video',
+  path: '/video',
+},
+{
+  icon: <FileText size={18} />,
+  text: 'Docs',
+  path: '/docs',
+},
+{
+  icon: <CreditCard size={18} />,
+  text: 'Payment',
+  path: '/payment',
+},
+
   ];
   
   return (
